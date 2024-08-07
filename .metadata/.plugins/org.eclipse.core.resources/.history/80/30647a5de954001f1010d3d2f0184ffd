@@ -4,8 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
 import io.restassured.response.Response;
-import static io.restassured.matcher.RestAssuredMatchers.*;
-import static org.hamcrest.Matchers.*;
 
 public class TestsExamples {
 	
@@ -33,8 +31,7 @@ public class TestsExamples {
 			get("/users?page=2").
 		then().
 			statusCode(200).
-			body("data[1].id",equalTo(8)).
-			log().all();
+			body("data[1].id", equals(8));
 	}
 
 }
