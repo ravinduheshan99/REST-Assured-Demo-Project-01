@@ -24,7 +24,6 @@ public class TestsExamples {
 		Assert.assertEquals(statusCode, 200);
 	}
 	
-	
 	@Test
 	public void test_2(){
 		
