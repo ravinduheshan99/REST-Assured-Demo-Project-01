@@ -1,0 +1,29 @@
+package tests;
+
+import org.testng.annotations.Test;
+
+import io.restassured.http.ContentType;
+
+import static io.restassured.RestAssured.*;
+
+import java.io.File;
+import java.io.FileInputStream;
+
+public class SoapXMLRequest {
+	
+	@Test
+	public void validateSoapXML(){
+		
+		File file = new File("./SoapRequest/Add.xml");
+		
+		FileInputStream fileInputStream = new FileInputStream(file);
+		
+		baseURI = "http://www.dneonline.com";
+		
+		given().
+			contentType("text/xml").
+			accept(ContentType.XML).
+			body(null)
+	}
+
+}
