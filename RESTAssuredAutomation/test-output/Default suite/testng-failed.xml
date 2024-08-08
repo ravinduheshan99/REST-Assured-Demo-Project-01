@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.GetAndPostExamples">
+      <class name="tests.JSONSchemaValidator">
         <methods>
           <include name="testGet"/>
         </methods>
-      </class> <!-- tests.GetAndPostExamples -->
+      </class> <!-- tests.JSONSchemaValidator -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
