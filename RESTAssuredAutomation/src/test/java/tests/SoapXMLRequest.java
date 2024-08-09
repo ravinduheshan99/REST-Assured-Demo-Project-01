@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import static org.hamcrest.Matchers.equalTo;
 
 public class SoapXMLRequest {
 	
@@ -49,7 +50,9 @@ public class SoapXMLRequest {
 		when().
 			post("/calculator.asmx").
 		then().
-			statusCode(200).log().all();
+			statusCode(200).log().all().
+		and().
+			body("//*:AddResult.text()",equalTo("5"));
 	}
 
 }
